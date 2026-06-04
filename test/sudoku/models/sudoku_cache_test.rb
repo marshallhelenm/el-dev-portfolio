@@ -1,6 +1,5 @@
 
 require "minitest/autorun"
-require_relative "../../../app/models/sudoku/sudoku"
 require_relative "../../../app/models/sudoku/sudoku_cache"
 class Sudoku::SudokuCacheTest < Minitest::Test
   def setup

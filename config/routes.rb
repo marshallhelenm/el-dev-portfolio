@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     root to: "solver#sudoku_solver"
     patch "solve_puzzle" => "solver#solve_puzzle"
     patch "new_puzzle" => "solver#new_puzzle"
+    patch "new_puzzle_from_api" => "solver#new_puzzle_from_api"
     patch "generate_puzzles" => "solver#generate_puzzles"
   end
 

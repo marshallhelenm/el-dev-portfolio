@@ -55,6 +55,15 @@ export default class extends Controller {
     });
   }
 
+  async newPuzzleFromAPI() {
+    this.closeResultCard();
+    this.showSpinner();
+    await patch("/sudoku/new_puzzle_from_api", {
+      responseKind: "turbo-stream",
+      body: this.difficultyValue ? { difficulty: this.difficultyValue } : {},
+    });
+  }
+
   showSpinner() {
     const spinner = document.getElementById("game-board-spinner");
     if (spinner) spinner.classList.remove("d-none");

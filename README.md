@@ -27,11 +27,11 @@ This Rails repository currently holds three projects in one app:
   - /sudoku
 - Features:
   - Puzzle generation and solving
+  - Optional live puzzle fetch from You Do Sudoku API (falls back to local JSON puzzles if key is not configured)
   - Interactive UI with Turbo/Stimulus-style updates
   - JSON puzzle data source
 
 - To DO:
-	- integrate youdosudoku api for solvable puzzles
   - Add panel with description of functionality
   - Improve puzzle generator efficiency
 
@@ -71,11 +71,29 @@ bundle install
 bin/rails db:setup
 ```
 
+1. Optional: enable You Do Sudoku API integration (live puzzles):
+
+```sh
+export YOU_DO_SUDOKU_API_KEY="<your-you-do-sudoku-api-key>"
+```
+
+Or store it in encrypted Rails credentials as `you_do_sudoku.api_key`.
+
+The app calls `https://you-do-sudoku-api.vercel.app/api` with the `x-api-key` header when this key is present.
+
 1. Optional Sudoku puzzle regeneration:
 
 ```sh
 rake puzzles:generate_json
 ```
+
+1. Optional Sudoku puzzle fetch from You Do Sudoku API:
+
+```sh
+rake puzzles:fetch_json_from_api
+```
+
+This task skips puzzles that already exist in the target difficulty bucket.
 
 1. Start server:
 
