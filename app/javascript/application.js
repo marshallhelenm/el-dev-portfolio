@@ -17,7 +17,7 @@ function initPortfolioFullpage() {
     return;
   }
   $("#fullpage").fullpage({
-    anchors: ["name_card", "projects", "credits"],
+    anchors: ["name_card", "projects", "android_apps", "credits"],
     controlArrows: true,
     scrollHorizontally: true,
   });
@@ -39,7 +39,7 @@ function handleFullpageOnResize() {
   } else {
     if (!document.documentElement.classList.contains("fp-enabled")) {
       $("#fullpage").fullpage({
-        anchors: ["name_card", "projects", "credits"],
+        anchors: ["name_card", "projects", "android_apps", "credits"],
         controlArrows: true,
         scrollHorizontally: true,
       });

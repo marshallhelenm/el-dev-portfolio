@@ -1,8 +1,9 @@
-# Sudoku-a Monorepo
+# El Marshall's Dev Portfolio
 
-This Rails repository currently holds three projects in one app:
+My portfolio site, a Rails 8 app. Besides the portfolio pages it hosts a couple of hobby projects
+as their own sections:
 
-1. Portfolio pages
+1. Portfolio pages (including a showcase of my Android apps)
 2. Sudoku hobby project
 3. Habit Saver hobby project
 
@@ -14,6 +15,8 @@ This Rails repository currently holds three projects in one app:
 - Routes:
   - / (root)
   - /portfolio
+- Sections: name card, hobby projects, Android apps, credits
+- Android app screenshots live in `app/assets/images/android/`
 
 - To Do:
   - Add about section
@@ -61,7 +64,7 @@ This Rails repository currently holds three projects in one app:
 
 ```sh
 git clone <repo-url>
-cd sudoku-a
+cd el-dev-portfolio
 bundle install
 ```
 
@@ -151,3 +154,6 @@ bin/rails test test/models/habit_saver/auth_session_test.rb
 
 - Dockerfile is included for containerized deployment.
 - See config/deploy.yml for deployment configuration.
+- The Kamal service, image and storage volume are still named `sudoku_a` from before the repo was
+  renamed. Renaming them would start a new container and a new, empty storage volume, so they're
+  left as they are.
