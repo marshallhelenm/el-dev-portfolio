@@ -16,7 +16,7 @@ if ($) {
   document.addEventListener("DOMContentLoaded", function () {
     if (window.jQuery && $("#fullpage").length) {
       $("#fullpage").fullpage({
-        anchors: ["name_card", "projects", "credits"],
+        anchors: ["name_card", "projects", "android_apps", "credits"],
       });
     }
   });

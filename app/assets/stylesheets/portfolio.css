@@ -228,6 +228,53 @@
   position: absolute;
 }
 
+/* Android apps section */
+.apps-block {
+  justify-content: flex-start;
+  padding: 70px 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.apps-title {
+  color: white;
+  font-size: 3em;
+  margin: 0 0 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.apps-intro {
+  color: white;
+  max-width: 60rem;
+  font-size: 1.1em;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0 0 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.apps-block .project-card {
+  justify-content: flex-start;
+  margin: 0;
+  width: 220px;
+}
+
+.apps-block .project-title {
+  margin: 12px 0 6px;
+}
+
+.apps-block .project-description {
+  margin: 0;
+  font-size: 0.95em;
+}
+
+.app-screenshot {
+  width: 130px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Responsive styles for mobile devices */
 @media (max-width: 768px) {
   .portfolio-section {
@@ -242,6 +289,24 @@
   .mobile-projects {
     display: flex;
     width: 100%;
+  }
+
+  .apps-block {
+    padding: 20px 10px;
+    overflow-y: visible;
+    width: 100%;
+  }
+
+  .apps-title {
+    font-size: 2rem;
+  }
+
+  .apps-intro {
+    font-size: 1em;
+  }
+
+  .section[data-anchor="android_apps"] {
+    height: auto;
   }
 
   .section[data-anchor="projects"] {
