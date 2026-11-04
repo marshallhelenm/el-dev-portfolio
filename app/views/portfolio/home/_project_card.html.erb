@@ -1,6 +1,6 @@
 <%# locals: (project:) %>
 <div class="project-card" data-anchor="<%= project[:title].parameterize %>">
-    <%= image_tag project[:image], alt: project[:title], class: "project-image" if project[:image] %>
+    <%= image_tag project[:image], alt: project[:title], class: project[:image_class] || "project-image" if project[:image] %>
     <h2 class="project-title"><%= project[:title] %></h2>
     <p class="project-description"><%= project[:description] %></p>
     <div class="project-links">

@@ -1,0 +1,18 @@
+<div class="section green-knit-bg" data-anchor="android_apps">
+  <div class="green-bg block apps-block">
+    <%= render "up_arrow", target: "projects" %>
+    <h1 class="apps-title">Android Apps</h1>
+    <p class="apps-intro">
+      These Kotlin apps were almost entirely written by Claude, Anthropic's AI coding assistant, with me
+      in the driver's seat: deciding what each app should do and how it should feel, testing it, and
+      steering every change. They've been a good excuse to learn Kotlin and Jetpack Compose, but mostly
+      I wanted these apps to exist, and I wanted to see how far I could get by leveraging Claude to build them.
+    </p>
+    <div class="projects-container">
+      <% @android_apps.each do |app| %>
+        <%= render "project_card", project: app %>
+      <% end %>
+    </div>
+    <%= render "down_arrow", target: "credits" %>
+  </div>
+</div>
