@@ -14,6 +14,13 @@ class Portfolio::HomeController < ApplicationController
         description: "A web-based multiplayer game inspired by the classic “Guess Who?”, but with memes instead of cartoon faces! Built with Vite + React, react-use-websocket for real-time communication, and Material UI for sleek styling.",
         github_link: "https://github.com/marshallhelenm/memetic",
         live_link: "https://memetic-app-d0ed892a999c.herokuapp.com/"
+      },
+      {
+        title: "Spoonful",
+        image: "spoonful.png",
+        description: "A meal planner that budgets effort instead of money. Rate each recipe by how many spoons it takes to make, then get a week of meals and a shopping list that fit the energy you actually have. Built with Rails 8. Try the demo account: demo@example.com / spoonful-demo.",
+        github_link: "https://github.com/marshallhelenm/Spoonful",
+        live_link: "https://spoonful.eldev.net"
       }
     ]
 
