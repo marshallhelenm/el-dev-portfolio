@@ -1,6 +1,5 @@
 class Portfolio::HomeController < ApplicationController
   def home
-
     @projects = [
       {
         title: "Sudoku Solver",

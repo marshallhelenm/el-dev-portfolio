@@ -1,4 +1,4 @@
-unless defined?(Turbo) # stub Turbo for tests to avoid errors when broadcasting to the channel
+unless defined?(Turbo::StreamsChannel) # stub Turbo for tests to avoid errors when broadcasting to the channel
     module Turbo
         class StreamsChannel
             def self.broadcast_action_to(*args, **kwargs)

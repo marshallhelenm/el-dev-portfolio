@@ -6,7 +6,6 @@ require_relative "puzzle"
 require_relative "group"
 
 class Sudoku::Column < Sudoku::Group
-
     def initialize(cells)
         super(cells)
         @group_type = :column

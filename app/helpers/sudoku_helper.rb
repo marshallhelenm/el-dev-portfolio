@@ -1,6 +1,6 @@
 module SudokuHelper
   require "matrix"
-  
+
   def randomize(values)
     values.sort { rand() - 0.5 }
   end
